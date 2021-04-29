@@ -1,0 +1,20 @@
+#На вход программе подается натуральное число nn, а затем nn целых чисел. Напишите программу, которая сначала выводит все отрицательные числа, затем нули, а затем все положительные числа, каждое на отдельной строке. Числа должны быть выведены в том же порядке, в котором они были введены.
+
+digits = []
+pos = []
+neg = []
+zeros = []
+n=int(input())
+for i in range(n):
+    x=int(input())
+    digits.append(x)
+for m in range(len(digits)):
+    if digits[m] > 0:
+        pos.append(digits[m])
+    elif digits[m] == 0:
+        zeros.append(digits[m])
+    elif digits[m] < 0:
+        neg.append(digits[m])
+print(*neg, sep='\n')
+print(*zeros, sep='\n')
+print(*pos, sep='\n')
