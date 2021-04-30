@@ -1,0 +1,12 @@
+#На вход программе подается строка текста, содержащая имя, отчество и фамилию человека. Напишите программу, которая выводит инициалы человека.
+
+s=input()
+init = []
+all = s.split()
+name = all[0]
+surname = all[1]
+patronimic = all[2]
+init.append(name[0].upper())
+init.append(surname[0].upper())
+init.append(patronimic[0].upper())
+print('.'.join(init),end = '.')
